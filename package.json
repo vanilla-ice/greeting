@@ -12,6 +12,7 @@
     "prod": "brunch build --production"
   },
   "dependencies": {
+    "@vimeo/player": "^2.0.1",
     "autoprefixer": "^6.3.4",
     "jaded-brunch": "^2.2.3",
     "jquery": "^2.2.2",

@@ -16,7 +16,7 @@ module.exports = {
 
     jaded: {
       jade: {
-        pretty: true
+        pretty: false
       }
     },
 

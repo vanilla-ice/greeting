@@ -3,3 +3,217 @@
 @import 'tools/_settings'
 @import 'tools/_mixins'
 @import 'tools/_fonts'
+
+body
+  font-family: 'DIN Pro'
+  overflow-x: hidden
+
+.header
+  width: 100%
+
+  iframe
+    height: 700px
+
+.about
+  width: 100%
+  padding: 80px 0
+
+  &__text
+    position: relative
+
+  &__title
+    font-weight: bold
+    font-size: 30px
+    text-align: center
+    line-height: 40px
+    letter-spacing: 1px
+    width: 400px
+    margin: 0 auto
+
+  &__description
+    font-size: 16px
+    font-weight: lighter
+    text-align: center
+    margin-top: 40px
+    width: 550px
+    margin: 40px auto 0 auto
+
+  &__bot-text
+    margin-top: 20px
+    display: inline-block
+
+  &__bold-text
+    font-weight: bold
+
+  &__partners
+    margin-top: 30px
+    img
+      display: block
+      width: 100%
+
+  &__logo
+    img
+      margin: 30px auto 0 auto
+      display: block
+
+  &__cloud
+    position: absolute
+    width: 140px
+
+
+    &_english
+      left: -100px
+      top: -40px
+
+    &_french
+      top: 100px
+      left: 0px
+
+    &_grece
+      right: -30px
+
+    &_chinese
+      right: -150px
+      top: 120px
+
+    &_korean
+      top: 50%
+      left: -20%
+
+    &_arabic
+      bottom: 0
+      right: -20%
+
+.about-items
+  margin-top: 85px
+  position: relative
+
+  &__title
+    text-align: center
+    font-weight: 900
+    letter-spacing: 0.2px
+
+  &__inner
+    margin-top: 35px
+
+  &__item
+    display: inline-block
+    width: 49%
+    position: relative
+    overflow: hidden
+    min-height: 345px
+    color: #fff
+
+    &:first-of-type
+      background: url('../images/item-bg2.jpg') no-repeat center
+      background-size: cover
+
+    &:last-of-type
+      background: url('../images/item-bg1.jpg') no-repeat center
+      background-size: cover
+      margin-left: 2%
+
+  &__opacity
+    background: rgba(0,0,0,0.4)
+    width: 100%
+    min-height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    padding: 10% 15%
+    text-align: center
+    opacity: 0
+    transition: opacity .3s ease
+
+    &:hover
+      opacity: 1
+
+  &__logo
+    min-height: 80px
+    position: relative
+
+    img
+      max-width: 150px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  &__txt
+    font-weight: 300
+    opacity: 0.9
+    margin-top: 10px
+
+  &__button
+    border: 1px solid #fff
+    width: 140px
+    margin: 25px auto 0 auto
+    padding: 10px 20px
+    border-radius: 4px
+    transition: all .3s ease
+
+    &:hover
+      background: #fff
+      color: #000
+      cursor: pointer
+
+@media screen and (max-width: 1024px)
+  .container
+    padding: 0 30px
+
+  .about
+    &__cloud
+      display: none
+
+    &__title
+      font-size: 40px
+      line-height: 55px
+      width: 490px
+
+    &__description
+      font-size: 22px
+      line-height: 30px
+      width: 90%
+
+  .about-items
+    &__title
+      font-size: 22px
+
+    &__opacity
+      opacity: 1
+
+@media screen and (max-width: 767px)
+  .container
+    padding: 0 15px
+
+  .header
+    iframe
+      height: 300px
+
+  .about
+    &__title
+      font-size: 20px
+      line-height: 30px
+      width: 90%
+
+    &__description
+      font-size: 16px
+      line-height: 25px
+      width: 100%
+      margin-top: 20px
+
+  .about-items
+
+    &__title
+      font-size: 16px
+      line-height: 25px
+
+    &__item
+      display: block
+      width: 100%
+
+      &:last-of-type
+        margin: 20px 0 0 0
+
+    &__opacity
+      padding: 10% 5%
