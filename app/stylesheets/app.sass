@@ -8,11 +8,70 @@ body
   font-family: 'DIN Pro'
   overflow-x: hidden
 
+
+
+.popup
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: rgba(0,0,0,0.9)
+  z-index: 10
+  display: block
+
+  &__inner
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    color: #fff
+    text-align: center
+
+  &__title
+    font-size: 20px
+
+  &__description
+    font-size: 14px
+    letter-spacing: 0.2px
+    margin-top: 15px
+
+  &__close
+    display: inline-block
+    color: #fff
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    background: #000
+    position: relative
+    transition: all .3s ease
+    border: 1px solid #fff
+    cursor: pointer
+    margin-top: 30px
+
+    div
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) rotate(45deg)
+      display: inline-block
+      font-size: 40px
+      height: 9px
+      line-height: 0
+      cursor: pointer
+
+    &:hover
+      background: #fff
+      color: #000
+
+
+
 .header
   width: 100%
 
   iframe
-    height: 700px
+    height: 100vh
+
 
 .about
   width: 100%
@@ -122,11 +181,6 @@ body
     left: 0
     padding: 10% 15%
     text-align: center
-    opacity: 0
-    transition: opacity .3s ease
-
-    &:hover
-      opacity: 1
 
   &__logo
     min-height: 80px
@@ -151,11 +205,16 @@ body
     padding: 10px 20px
     border-radius: 4px
     transition: all .3s ease
+    background: transparent
+    color: #fff
 
     &:hover
       background: #fff
       color: #000
       cursor: pointer
+
+.hidden
+  display: none !important
 
 @media screen and (max-width: 1024px)
   .container

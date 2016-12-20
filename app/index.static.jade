@@ -12,8 +12,19 @@ head
     require('initialize');
 
 body
+  
+  .popup.js-popup.hidden
+    .popup__inner
+      .popup__title
+        |THANK YOU FOR GIVING
+      .popup__description
+        |We hope this brings you good tidings for 2017
+      .popup__close.js-close
+        div
+          |+
+        
   .header
-    |<iframe src="https://player.vimeo.com/video/182932029?autoplay=1&loop=0&title=0&byline=0&portrait=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    |<iframe src="https://player.vimeo.com/video/196395673?autoplay=1&loop=0&title=0&byline=0&portrait=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   
   .about#about
     .container
@@ -52,7 +63,7 @@ body
                 img(src="images/manzil-logo.png")
               .about-items__txt
                 |A non-profit organisation helping people with disabilities become productive members of society through academic, social and vocational programmes. 
-              .about-items__button
+              button.about-items__button(type="submit" value="manzil")
                 |DONATE
               
           .about-items__item
@@ -61,8 +72,10 @@ body
                 img(src="images/ghaf-logo.png")
               .about-items__txt
                 |A planting programme for Ghaf trees – the sturdiest plants of the harsh desert, drought-tolerant, but currently suffering from human encroachment.  
-              .about-items__button
-                |DONATE
+              form#formSecond(action="contact.php")
+                button.about-items__button(type="submit" value="give a ghaf")
+                  |DONATE
+                
       
       .about__partners
         img(src="images/bottom-image.png")
